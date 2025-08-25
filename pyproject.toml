@@ -1,7 +1,11 @@
 [project]
-name = "mcp"
+name = "BUPT-assistant"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "mcp[cli]>=1.13.1",
+    "pyexecjs>=1.5.1",
+    "requests>=2.32.5",
+]
