@@ -27,6 +27,15 @@ def usage_guide() -> str:
     === 安全提醒 ===
     - 不要在日志/响应中回显密码或验证码
     - 两个系统的登录状态是独立的
+
+    === 常用来访问的校内网址 === 
+    1) 教务系统:https://jwgl.bupt.edu.cn/jsxsd/
+    2) 信息门户:http://my.bupt.edu.cn/xs_index.jsp?urltype=tree.TreeTempUrl&wbtreeid=1541
+    3) 校内通知:http://my.bupt.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1154
+    4) 规章制度:http://my.bupt.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1536
+    5) 图书馆:https://lib.bupt.edu.cn/index.html
+    6) 校内文件:http://my.bupt.edu.cn/list.jsp?totalpage=15&PAGENUM=1&urltype=tree.TreeTempUrl&wbtreeid=2001
+
     """
     return """
     完整使用指南：
@@ -41,10 +50,11 @@ def usage_guide() -> str:
     1) 设置cookies供之后使用
     2) 检查登录：check_is_login_in_BUPT_Menhu_website()
     3) 获取内容：get_page_content_in_BUPT_Menhu_website(url)
+    注意：URL 必须位于 http://my.bupt.edu.cn/ 域名下
     
     === 登录类型说明 ===
-    - username_password: 用户名密码登录
-    - username_smstoken: 用户名短信验证码登录
+    1) 教务网站需要账号和密码
+    2) 信息门户网站需要设置cookies
     
     === 安全提醒 ===
     - 不要在日志/响应中回显密码或验证码
