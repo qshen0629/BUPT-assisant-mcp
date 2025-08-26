@@ -38,9 +38,9 @@ def usage_guide() -> str:
     注意：URL 必须位于 https://jwgl.bupt.edu.cn/jsxsd/ 域名下
     
     === BUPT 信息门户系统 ===
-    1) 密码登录：login_new_website_with_password(username, password)
-    2) 检查登录：check_new_website_login()
-    3) 获取内容：get_new_website_content(url)
+    1) 设置cookies供之后使用
+    2) 检查登录：check_is_login_in_BUPT_Menhu_website()
+    3) 获取内容：get_page_content_in_BUPT_Menhu_website(url)
     
     === 登录类型说明 ===
     - username_password: 用户名密码登录
@@ -134,9 +134,10 @@ menhu_web_login = MenhuWebLogin()
 @mcp.tool()
 def login_to_BUPT_JiaoWu_website(context: dict) -> str:
     """
-    Login to the website.  
+    Login to the BUPT website.  
     This is the first login, it will let you to get the access to the website.
     You don't need to run this tool anymore, unless you want to change your username or password.
+    You need to provide the username and password.
     Args:
         username: The username to login with.
         password: The password to login with.
